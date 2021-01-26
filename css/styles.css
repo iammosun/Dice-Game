@@ -1,0 +1,313 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* general styling........................................................... */
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/bgBird.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+a{
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+a:hover{
+  color: black;
+  transition: color 0.3s;
+}
+img{
+  width: 6vw;
+  height: 6vw;
+}
+
+
+/* game area................................................................. */
+.body-center{
+  background-color: white;
+  height: 85%;
+  width: 90%;
+  box-shadow: 0 0 10px 5px rgba(128, 128, 128, 1);
+}
+.content-flex{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  min-height: 100%;
+  min-width: 100%;
+}
+.player-one, .player-two{
+  width: 50%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(219, 177, 7, 0.1);
+}
+.active-color{
+  background-color: rgba(128, 128, 128, 0.3);
+}
+h2{
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin: 0;
+}
+.circle1, .circle2{
+  margin: 0;
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  background-color: rgba(219, 177, 7, 1);
+}
+.circle2{
+  display: none;
+}
+.h2-and-circle{
+  margin: 0 1em 1em 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.total-score{
+  font-size: 4em;
+  margin: 0;
+  margin-bottom: 1.6em;
+}
+.current-score{
+  font-size: 0.9em;
+  background-color: rgba(211, 211, 211, 0.8);
+  min-width: 40%;
+  margin: 0.5em auto 0;
+  padding: 0.5em;
+}
+.current-score p:last-child{
+  font-size: 2em;
+  margin: 0;
+}
+.current-score p:first-child{
+  margin: 0 0.2em 0.2em 0.2em;
+}
+
+
+/* Middle contents........................................................... */
+.new-game{
+  top: 12%;
+}
+.btn, #dice-image, #final-score{
+  position: absolute;
+  background-color: transparent;
+  border: none;
+}
+.btn p{
+  font-size: 1.2rem;
+}
+#dice-image{
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.roll-btn{
+  top: 60%;
+}
+.hold-btn{
+  top: 67%;
+}
+#final-score{
+  top: 77%;
+}
+#final-score input{
+  text-align: center;
+  font-style: italic;
+  font-size: 1em;
+  border-style: solid;
+  background-color: transparent;
+  height: 3em;
+}
+
+
+
+/* tablets................................................................... */
+@media screen and (max-width:900px) and (min-width:568px){
+  h2{
+    font-size: 1.3rem;
+  }
+  .body-center{
+    height: 90%;
+    width: 98%;
+  }
+  .new-game{
+    top: 10%;
+  }
+  img{
+    width: 3rem;
+    height: 3rem;
+  }
+  #dice-image{
+    top: 29%;
+    gap: 0.5em;
+  }
+  .new-game p, .btn p, #final-score{
+    font-size: 2vw;
+  }
+  .total-score{
+    margin-bottom: 0.5em;
+  }
+  .roll-btn{
+    top: 63%;
+  }
+  .hold-btn{
+    top: 71%;
+  }
+  #final-score{
+    top: 84%;
+  }
+  #final-score input{
+    height: 2.1em;
+  }
+  .current-score p:first-child{
+    font-size: 0.8em;
+  }
+  .player-one, .player-two{
+    padding: 3%;
+  }
+}
+
+
+
+/* mobile.................................................................... */
+@media screen and (max-width:567px){
+  .body-center{
+    height: 90%;
+    width: 100%;
+  }
+  .roll-btn{
+    top: 72%;
+  }
+  .hold-btn{
+    top: 78%;
+  }
+  #final-score{
+    top: 87%;
+  }
+  #final-score input{
+    height: 2.5em;
+  }
+  .new-game{
+    top: 7%;
+  }
+  .new-game p{
+    font-size: 0.9em;
+  }
+  img{
+    width: 4rem;
+    height: 4rem;
+  }
+  #dice-image{
+    flex-direction: row;
+    top: 58%;
+  }
+  .total-score{
+    margin-bottom: 0.7em;
+    font-size: 3em;
+  }
+  .current-score p:first-child{
+    font-size: 0.7em;
+  }
+  .player-one, .player-two{
+    justify-content: flex-start;
+    width: 50%;
+    padding: 0;
+    padding-top: 5em;
+  }
+  .line{
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid black;
+  }
+  h2{
+    font-size: 0.7em;
+    font-weight: bold;
+  }
+}
+
+
+
+/* high potraits......................................................... */
+@media screen and (min-height:950px){
+  .body-center{
+    height: 90%;
+    width: 100%;
+  }
+  .roll-btn{
+    top: 72%;
+  }
+  .hold-btn{
+    top: 78%;
+  }
+  #final-score{
+    top: 87%;
+  }
+  #final-score input{
+    height: 3em;
+  }
+  .new-game{
+    top: 7%;
+  }
+  img{
+    width: 7rem;
+    height: 7rem;
+  }
+  #dice-image{
+    flex-direction: row;
+    top: 58%;
+  }
+  .total-score{
+    margin-bottom: 2.5em;
+    font-size: 3em;
+  }
+  .current-score p:first-child{
+    font-size: 1.2em;
+  }
+  .player-one, .player-two{
+    justify-content: flex-start;
+    width: 50%;
+    padding: 0;
+    padding-top: 5em;
+  }
+  .line{
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid black;
+  }
+  h2{
+    font-size: 2rem;
+  }
+  .h2-and-circle{
+    margin-top: 3em;
+  }
+  .btn p{
+    font-size: 2em;
+  }
+  .new-game p{
+    font-size: 1.3em;
+  }
+}
