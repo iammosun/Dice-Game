@@ -1,6 +1,6 @@
 # Dice-Game
 ## Budgeting
-  See [here](file:///C:/Users/Mosunmola%20Owolade/Desktop/projects/Dice%20Roll%20Game%20In%20JavaScript/index.html)
+  See [here](https://iammosun.github.io/Dice-Game/)
 
 ## Built With
  * HTML5
