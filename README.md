@@ -1,5 +1,4 @@
 # Dice-Game
-## Budgeting
   See [here](https://iammosun.github.io/Dice-Game/)
 
 ## Built With
